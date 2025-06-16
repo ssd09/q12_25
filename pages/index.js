@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/save", {
+    const res = await fetch("/api/save-selections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(selections)
