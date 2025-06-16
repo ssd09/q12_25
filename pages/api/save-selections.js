@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end("Only POST allowed");
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzG2ahXqoWExRTSgMZ2BFXpYicKNXQntTjIIntO5CmNkailmdqlalbjBA6auY8QWbtU/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyBqnwxC4_-pdKPC6emTn0-NaY_2pbzZg-tdjmxvELwkeZtKe7zDt6roXsDTO8p_TLK/exec", {
       method: 'POST',
       body: JSON.stringify(req.body),
       headers: {
