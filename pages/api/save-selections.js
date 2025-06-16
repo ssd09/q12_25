@@ -6,13 +6,13 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        q1: { answer: "No", priority: 2 },
+        "q1": { "answer": "No", "priority": 2 },
         q2: { answer: "No", priority: 1 },
         q3: { answer: "No", priority: 3 },
         q4: { answer: "No", priority: 4 },
         q5: { answer: "No", priority: 5 }
       }),
-    });
+    })
 
     const result = await googleResponse.text();
     res.status(200).json({ success: true, response: result });
