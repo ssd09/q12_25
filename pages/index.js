@@ -18,19 +18,16 @@ export default function Home() {
     }));
   };
 
-  //const handleSubmit = async () => {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbyMbBzq_r3PE2rLhAa4zfLKnEe_ou82JpZQ6rm25mDIr55aJvH7RNejYk7gzbPKb48G/exec", {
+  const handleSubmit = async () => {
+    const res = await fetch("/api/save-selections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        "q1": { "answer": "No", "priority": 2 },
-        q2: { answer: "No", priority: 1 } 
-      })
+      body: JSON.stringify(selections)
     });
 
     if (res.ok) alert("Responses saved!");
     else alert("Error saving responses.");
- // };
+  };
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial" }}>
