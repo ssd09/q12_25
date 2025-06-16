@@ -1,29 +1,24 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Only POST allowed" });
   }
 
-  const { selections } = req.body;
-  if (!Array.isArray(selections)) {
-    res.status(400).json({ error: 'Invalid data' });
-    return;
+  const dataDir = path.join(process.cwd(), "data");
+  const filePath = path.join(dataDir, "responses.json");
+
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
   }
 
-  const filePath = path.join(process.cwd(), 'data', 'selections.json');
-  let prev = [];
-  try {
-    if (fs.existsSync(filePath)) {
-      prev = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    }
-  } catch (e) {}
+  const existing = fs.existsSync(filePath)
+    ? JSON.parse(fs.readFileSync(filePath))
+    : [];
 
-  // Save new selections (append for demo; in real app, store per user)
-  const updated = [...prev, { timestamp: Date.now(), selections }];
-  fs.writeFileSync(filePath, JSON.stringify(updated, null, 2));
+  existing.push({ timestamp: new Date().toISOString(), ...req.body });
 
+  fs.writeFileSync(filePath, JSON.stringify(existing, null, 2));
   res.status(200).json({ success: true });
 }
