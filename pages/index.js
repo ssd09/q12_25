@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/save-selections", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbyMbBzq_r3PE2rLhAa4zfLKnEe_ou82JpZQ6rm25mDIr55aJvH7RNejYk7gzbPKb48G/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(selections)
