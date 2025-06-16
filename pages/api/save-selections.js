@@ -6,7 +6,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        q1: { answer: "Yes", priority: 2 },
+        q1: { answer: "No", priority: 2 },
         q2: { answer: "No", priority: 1 },
         q3: { answer: "No", priority: 3 },
         q4: { answer: "No", priority: 4 },
