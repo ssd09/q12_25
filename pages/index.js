@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import QuestionSelector from '../components/QuestionSelector';
-import styles from '../styles/globals.css';
 
 export default function Home() {
   return (
