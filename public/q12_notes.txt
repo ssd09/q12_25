@@ -1,3 +1,82 @@
-- Discussed engagement trends
-- Prioritized recognition and feedback
-- Need better communication channels
+Category:
+A  observation
+B  example
+C  action point
+
+--------------------------------------------------------------------------------------------
+Q03: At work, I have the opportunity to do what I do best every day.
+--------------------------------------------------------------------------------------------
+A. There is a lot of leadership change in past one year and that have changed/modified working style and expectations. So sometime it is difficult to change or adjust to these required changes.
+   May be a slow move can help.
+A. we have been doing the best already, but it seems as if new leadership thinks that it was never done before and is happening only in 2025, for example, we have been doing concepts, 
+   it is nothing new, but because of this narrative that systems is not required and people misunderstanding the intent,
+   the image of systems has gone for a toss, so some concern that I wanted to share.
+C. Systems team need a definition and growth path. we have been doing the same thing from the start and will do for next 4 years.    +1
+C. More opportunities should be given apart from project work - like DRE level event     +1 
+B. some time SGTC and Division leadership teams are not align and that affect the overall project functioning.
+B. Expectation of best is different at different levels. Our mission and vision statements at DRE and SGTC DRE levels don't match with the expectations from BIU, 
+   where we only stick to good enough rather than state of art for the selected MVP.
+A. What do i get in return when I do the best that is never talked :)- This is a fun statement
+B . We don't have state of the art infra for CI/CD and expecting the best to be delivered puts a lot of overhead on Developers, to work with the existing CI/CD and deliver the best. 
+A. R&R of each role is not clear
+A. Hindrances such as resource unavailability or movement of resources from planned, affect the performance in what we can do best
+C. Transparent goal settings and flexible update.
+
+-----------------------------------------------------------------------------------------------
+Q06: There is someone at work who encourages my development.
+-----------------------------------------------------------------------------------------------
+C. We can assign specific people who are interested in taking this up, for example, I would let my Manager know in a one on one setting that I can do a few things to Encourage the development
+   of my peers.
+C. Available opportunities should be shared with all the members in the team and not limited to few. Also may be partnering with the one who is actually working on it will fetch experience on the other aspiring person.
+C. There needs to be a clear vision of the team and what is expected to draft a development plan. This is in works past one year I see. Just need more attention.
+A. There is always ask from me to come up with my development plan .
+C. Intent of the development plan can be clear so it aligns well. Development plan needs to be a two way commitment
+C. Overall, team spirit shall be considered. Better to have focus on single goal and then encourage team members to work rather than creating a complex set of responsibilities that people pin point other roles.
+
+------------------------------------------------------------------------------------------------
+Q07: At work, my opinions seem to count.
+------------------------------------------------------------------------------------------------
+A. Everyone is equally contributing and managing their own work and deliverable and each one should be counted for their work.
+   Also while making decisions/communications each one should get same opportunity. There seems to be a bias in this few times.
+C. People with past experience do count, but letting others in the team experience a new thing can add up to team strength and 
+   now you have two qualified persons to do same work.- No harm to the team 
+A. For me this is less of a concern because I would like to save my energy if there is already an opinion formed and the change of opinion which I want to influence is beyond my control, 
+   so even if it doesn't count and if I get my growth, I am okay, Opinion won't matter in the long run, execution and results matter
+A. During division visitors there should be equal display of talent and work and not limited to few. In the past there have been events where only 1/2 members were encouraged to do 
+   and the rest were waiting at their seats at 8AM.
+A. Always important things are kept for the last and minimum time is spent on it - like Q12 meetings, appraisal discussions, goals
+A. Agile Teams are not empowered
+
+-------------------------------------------------------------------------------------------------
+General Comments :
+-------------------------------------------------------------------------------------------------
+*Information reach very late to team  sometime like labs schedule of shoulder . hip ,knee +1
+*New hirings info not share generally with teams +1
+*Do not make people insecure, I did sense insecurity among all teams SW, Test and SYS
+*There are always counter questions related to trainings and I don't see any recommendation from leadership to do a particular trainings to excel skills. They just focus on SLMS trainings
+*Please give some good tools, SGTC Budget has reduced in providing quality headphones and camera and peripherals etc. :D
+
+A. All project related decision are made without consultation, within closed group and information is not pass well to the team. which create problem in execution of project.
+A. Sometimes the headings/ownership is for name sake, actual decision is in Division or leadership. But we always keep the name sake owner accountable for everything.
+A. If things are planned in a certain way for capability development, we can adhere to the plan instead of making too many changes. Team's opinion matters here.
+
+-------------------------------------------------------------------------------------------------------
+Action Items
+-------------------------------------------------------------------------------------------------------
+Actions related to Q3:
+  --------------------------
+1. Transparent communication with team for key decisions such as resource unavailability or movement of resources from planned plajects.
+2. Contingency planning for scenarios such as in point 1 with being inclusive with the team.
+
+Actions related to Q6:
+  ---------------------------
+1. Concussive environment enabling to achieve crisp/fewer development goals relevant to projects and individual aspirations.
+2. Updates in development/capability plan shall be with shared agreement.
+
+Actions related to Q7:
+  ---------------------------
+1. Team's opinion shall be considered in key project decisions. 
+2. Probably have more updates w.r.t. at program level.
+3. Quarterly Retrospective sessions. 
+
+
