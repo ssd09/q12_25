@@ -53,7 +53,7 @@ export default function Home() {
         {notes}
       </pre>
 
-      <h2 style={{ marginTop: "2rem" }}>Your Input</h2>
+      <h2 style={{ marginTop: "2rem" }}>Add your feedback here ... </h2>
       <textarea
         rows="5"
         cols="60"
