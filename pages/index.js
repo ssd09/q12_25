@@ -1,57 +1,69 @@
-import { useState } from "react";
-
-const questions = [
-  "I know what is expected of me at work.",
-  "I have the materials and equipment I need to do my work right.",
-  "At work, I have the opportunity to do what I do best every day.",
-  "In the last seven days, I have received recognition or praise for doing good work.",
-  "My supervisor, or someone at work, seems to care about me as a person."
-];
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [selections, setSelections] = useState({});
+  const [notes, setNotes] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [status, setStatus] = useState("");
 
-  const handlePriorityChange = (question, priority) => {
-    setSelections((prev) => ({
-      ...prev,
-      [question]: priority
-    }));
-  };
+  useEffect(() => {
+    // Fetch the content of local file
+    fetch("/q12_notes.txt")
+      .then((res) => res.text())
+      .then((text) => setNotes(text))
+      .catch(() => setNotes("Failed to load notes."));
+  }, []);
 
-  const handleSubmit = async () => {
-    const res = await fetch("/api/save-selections", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(selections)
-    });
+  const handleSend = async () => {
+    if (!feedback.trim()) {
+      setStatus("Please write something.");
+      return;
+    }
 
-    if (res.ok) alert("Responses saved!");
-    else alert("Error saving responses.");
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          feedback: feedback,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        setStatus("Feedback saved ✅");
+        setFeedback("");
+      } else {
+        setStatus("Error saving feedback: " + result.message);
+      }
+    } catch (err) {
+      setStatus("Error: " + err.message);
+    }
   };
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-      <h1>Q12 Priority Survey</h1>
-      {questions.map((q, index) => (
-        <div key={index} style={{ marginBottom: "1rem" }}>
-          <strong>{q}</strong>
-          <br />
-          Priority:
-          <select
-            value={selections[q] || ""}
-            onChange={(e) => handlePriorityChange(q, parseInt(e.target.value))}
-          >
-            <option value="">Select</option>
-            {[1, 2, 3, 4, 5].map((p) => (
-              <option key={p} value={p}>
-                {p}
-              </option>
-            ))}
-          </select>
-        </div>
-      ))}
-      <button onClick={handleSubmit}>Submit</button>
+    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
+      <h1>Q12 Team Discussion and Action Points</h1>
+      <pre style={{ background: "#f4f4f4", padding: "1rem", borderRadius: "8px" }}>
+        {notes}
+      </pre>
+
+      <h2 style={{ marginTop: "2rem" }}>Your Input</h2>
+      <textarea
+        rows="5"
+        cols="60"
+        value={feedback}
+        onChange={(e) => setFeedback(e.target.value)}
+        placeholder="Write your comment or action point here..."
+      />
+      <br />
+      <button onClick={handleSend} style={{ marginTop: "10px" }}>Send</button>
+      <p>{status}</p>
     </div>
   );
 }
-
