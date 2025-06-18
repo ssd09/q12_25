@@ -22,7 +22,7 @@ export default function Home() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch(https://script.google.com/macros/s/AKfycbyMbBzq_r3PE2rLhAa4zfLKnEe_ou82JpZQ6rm25mDIr55aJvH7RNejYk7gzbPKb48G/exec, {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyMbBzq_r3PE2rLhAa4zfLKnEe_ou82JpZQ6rm25mDIr55aJvH7RNejYk7gzbPKb48G/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
